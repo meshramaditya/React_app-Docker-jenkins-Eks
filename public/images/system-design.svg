@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8faf9"/>
+  
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="systemGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F2FE4;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#162E93;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#systemGradient)"/>
+  
+  <!-- Network nodes -->
+  <circle cx="200" cy="80" r="12" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <circle cx="120" cy="150" r="10" fill="#162E93" stroke="#2F2FE4" stroke-width="2"/>
+  <circle cx="200" cy="150" r="10" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <circle cx="280" cy="150" r="10" fill="#162E93" stroke="#2F2FE4" stroke-width="2"/>
+  <circle cx="160" cy="220" r="8" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <circle cx="240" cy="220" r="8" fill="#162E93" stroke="#2F2FE4" stroke-width="2"/>
+  
+  <!-- Network connections -->
+  <line x1="200" y1="92" x2="120" y2="140" stroke="#2F2FE4" stroke-width="2"/>
+  <line x1="200" y1="92" x2="200" y2="140" stroke="#162E93" stroke-width="2"/>
+  <line x1="200" y1="92" x2="280" y2="140" stroke="#2F2FE4" stroke-width="2"/>
+  <line x1="120" y1="160" x2="160" y2="212" stroke="#162E93" stroke-width="2"/>
+  <line x1="200" y1="160" x2="160" y2="212" stroke="#2F2FE4" stroke-width="2"/>
+  <line x1="200" y1="160" x2="240" y2="212" stroke="#162E93" stroke-width="2"/>
+  <line x1="280" y1="160" x2="240" y2="212" stroke="#2F2FE4" stroke-width="2"/>
+  
+  <!-- Center nodes have small circles -->
+  <circle cx="200" cy="80" r="5" fill="#f8faf9"/>
+  <circle cx="120" cy="150" r="4" fill="#f8faf9"/>
+  <circle cx="200" cy="150" r="4" fill="#f8faf9"/>
+  <circle cx="280" cy="150" r="4" fill="#f8faf9"/>
+  
+  <!-- Label -->
+  <text x="200" y="280" font-size="18" font-weight="700" text-anchor="middle" fill="#162E93">System Design</text>
+</svg>

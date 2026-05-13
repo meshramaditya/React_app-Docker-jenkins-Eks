@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8faf9"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="dsaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F2FE4;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#162E93;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#dsaGradient)"/>
+  
+  <!-- Tree nodes -->
+  <circle cx="200" cy="50" r="12" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Left branch -->
+  <circle cx="100" cy="130" r="12" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <line x1="200" y1="62" x2="100" y2="118" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Right branch -->
+  <circle cx="300" cy="130" r="12" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <line x1="200" y1="62" x2="300" y2="118" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Left-left node -->
+  <circle cx="50" cy="200" r="10" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <line x1="100" y1="142" x2="50" y2="190" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Left-right node -->
+  <circle cx="150" cy="200" r="10" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <line x1="100" y1="142" x2="150" y2="190" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Right-left node -->
+  <circle cx="250" cy="200" r="10" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <line x1="300" y1="142" x2="250" y2="190" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Right-right node -->
+  <circle cx="350" cy="200" r="10" fill="#2F2FE4" stroke="#162E93" stroke-width="2"/>
+  <line x1="300" y1="142" x2="350" y2="190" stroke="#162E93" stroke-width="2"/>
+  
+  <!-- Label -->
+  <text x="200" y="280" font-size="18" font-weight="700" text-anchor="middle" fill="#162E93">Data Structures & Algorithms</text>
+</svg>

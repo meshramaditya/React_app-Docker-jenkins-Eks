@@ -1,0 +1,41 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8faf9"/>
+  
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="uiuxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F2FE4;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#162E93;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#uiuxGradient)"/>
+  
+  <!-- Wireframe frame -->
+  <rect x="50" y="60" width="300" height="180" rx="8" fill="none" stroke="#2F2FE4" stroke-width="2"/>
+  <rect x="50" y="60" width="300" height="30" rx="8" fill="#2F2FE4" opacity="0.1"/>
+  
+  <!-- Header -->
+  <line x1="50" y1="90" x2="350" y2="90" stroke="#162E93" stroke-width="1"/>
+  
+  <!-- Sidebar -->
+  <line x1="110" y1="90" x2="110" y2="240" stroke="#2F2FE4" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Content areas (cards/blocks) -->
+  <rect x="130" y="110" width="200" height="30" rx="4" fill="none" stroke="#2F2FE4" stroke-width="1.5"/>
+  <rect x="130" y="155" width="200" height="60" rx="4" fill="none" stroke="#162E93" stroke-width="1.5"/>
+  
+  <!-- Navigation dots -->
+  <circle cx="70" cy="105" r="3" fill="#2F2FE4"/>
+  <circle cx="70" cy="130" r="3" fill="#162E93"/>
+  <circle cx="70" cy="155" r="3" fill="#2F2FE4"/>
+  <circle cx="70" cy="180" r="3" fill="#162E93"/>
+  
+  <!-- Design elements -->
+  <circle cx="320" cy="75" r="3" fill="#2F2FE4"/>
+  <circle cx="330" cy="75" r="3" fill="#162E93"/>
+  <circle cx="340" cy="75" r="3" fill="#2F2FE4"/>
+  
+  <!-- Label -->
+  <text x="200" y="280" font-size="18" font-weight="700" text-anchor="middle" fill="#162E93">UI/UX Design</text>
+</svg>

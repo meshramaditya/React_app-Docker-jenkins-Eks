@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8faf9"/>
+  
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="reactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2F2FE4;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#162E93;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#reactGradient)"/>
+  
+  <!-- Central circle (React atom nucleus) -->
+  <circle cx="200" cy="150" r="20" fill="none" stroke="#162E93" stroke-width="2"/>
+  <circle cx="200" cy="150" r="3" fill="#2F2FE4"/>
+  
+  <!-- Orbit 1 - horizontal -->
+  <ellipse cx="200" cy="150" rx="70" ry="25" fill="none" stroke="#2F2FE4" stroke-width="2" opacity="0.5"/>
+  <circle cx="270" cy="150" r="8" fill="#2F2FE4"/>
+  <circle cx="130" cy="150" r="8" fill="#2F2FE4"/>
+  
+  <!-- Orbit 2 - diagonal -->
+  <ellipse cx="200" cy="150" rx="60" ry="60" fill="none" stroke="#162E93" stroke-width="2" opacity="0.5" transform="rotate(45 200 150)"/>
+  <circle cx="242" cy="108" r="8" fill="#162E93"/>
+  <circle cx="158" cy="192" r="8" fill="#162E93"/>
+  
+  <!-- Orbit 3 - diagonal other way -->
+  <ellipse cx="200" cy="150" rx="60" ry="60" fill="none" stroke="#2F2FE4" stroke-width="2" opacity="0.5" transform="rotate(-45 200 150)"/>
+  <circle cx="242" cy="192" r="8" fill="#2F2FE4"/>
+  <circle cx="158" cy="108" r="8" fill="#162E93"/>
+  
+  <!-- Label -->
+  <text x="200" y="280" font-size="18" font-weight="700" text-anchor="middle" fill="#162E93">React Development</text>
+</svg>
