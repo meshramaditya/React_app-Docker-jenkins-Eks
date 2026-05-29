@@ -11,17 +11,8 @@ TechLearn is a recruiter-friendly internal learning platform built with React an
 - EKS-ready app packaging for cloud deployment
 - Clear UI structure that is easy to explain to recruiters
 
-## Visual Preview
 
-![Hero background](public/images/hero-bg.svg)
-
-![DevOps diagram](public/images/devops.svg)
-
-![System design icon](public/images/system-design.svg)
-
-![React icon](public/images/react.svg)
-
-## App Structure
+## Application Structure
 
 ```text
 src/
@@ -30,30 +21,14 @@ src/
 ├── App.css
 ├── index.css
 ├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── CourseCard.jsx
-│   ├── CourseDetails.jsx
-│   ├── CategoryStrip.jsx
-│   ├── ProgressBar.jsx
-│   ├── SectionHeader.jsx
-│   └── StatusPanel.jsx
 ├── context/
-│   ├── CoursePlatformProvider.jsx
-│   ├── coursePlatformContext.js
-│   └── useCoursePlatform.js
 ├── pages/
-│   ├── HomePage.jsx
-│   ├── CoursesPage.jsx
-│   ├── CourseDetailsPage.jsx
-│   └── AboutPage.jsx
 ├── services/
-│   ├── courseService.js
-│   └── mockCourses.js
 └── utils/
-    ├── appConfig.js
-    ├── date.js
-    └── formatters.js
+
+k8s/
+├── deployment.yaml
+└── service.yaml
 ```
 
 ## How It Works
@@ -69,17 +44,13 @@ flowchart LR
   EKS --> Service[LoadBalancer Service]
   Service --> Users[Users Access the App]
 ```
+## Meaningful Commands
 
 ## Local Development
 
 ```bash
 npm install
 npm run dev
-```
-
-Useful local commands:
-
-```bash
 npm run build
 npm run preview
 npm run lint
@@ -111,8 +82,33 @@ kubectl apply -f k8s/service.yaml
 kubectl get pods
 kubectl get svc
 ```
+## Work Images
 
-## Project Layout For Recruiters
+### Application Running Locally
+<img width="1897" height="1004" alt="Screenshot 2026-05-30 002431" src="https://github.com/user-attachments/assets/35815ba1-a1b7-47e4-b40f-8958220e1e4c" />
+
+### Docker Build &  Docker Image
+<img width="1897" height="1004" alt="Screenshot 2026-05-30 002605" src="https://github.com/user-attachments/assets/bac02d5e-7b20-4c44-90b6-318110073e65" />
+
+## Run containerized applications
+<img width="1895" height="908" alt="image" src="https://github.com/user-attachments/assets/f44c3b6c-47dc-4798-a1ad-3f5d31768aa0" />
+<img width="1898" height="937" alt="image" src="https://github.com/user-attachments/assets/6398663c-8df3-4ffa-8293-1fb37eacdbb7" />
+
+### Docker Hub Repository
+<img width="1897" height="874" alt="Screenshot 2026-05-29 090513" src="https://github.com/user-attachments/assets/f1a6164f-420e-4399-9214-ae6017442f27" />
+
+### EKS Cluster Creation
+<img width="1878" height="827" alt="Screenshot 2026-05-30 002846" src="https://github.com/user-attachments/assets/ed464346-17ef-41f9-8c6f-87ca6b7c8acb" />
+
+### Kubernetes Nodes, Deployment, Pods, Service, Namespace
+<img width="1888" height="839" alt="Screenshot 2026-05-30 004354" src="https://github.com/user-attachments/assets/dacdc1b6-115b-4442-b5ac-c22dbab9dbf1" />
+
+
+### Application Through ELB
+<img width="1897" height="922" alt="Screenshot 2026-05-30 003145" src="https://github.com/user-attachments/assets/747a58e6-f6db-4cb1-ba2e-c85d8654b6a5" />
+
+
+## Project Layout
 
 - `src/components` contains reusable UI blocks for the course platform.
 - `src/context` holds state management for page navigation, filtering, and enrollment.
