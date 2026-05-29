@@ -30,8 +30,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Install package
-RUN apk add --no-cache bash && \
-    addgroup -S appgroup && \
+RUN addgroup -S appgroup && \
     adduser -S appuser -G appgroup
 
 # Remove default nginx files
@@ -43,16 +42,17 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
+# Avoid writing a PID file on the read-only/non-root runtime path
+RUN sed -i 's|pid        /run/nginx.pid;|pid /dev/null;|' /etc/nginx/nginx.conf
+
 # Assign permissions
 RUN chown -R appuser:appgroup /usr/share/nginx/html && \
     chown -R appuser:appgroup /var/cache/nginx && \
     chown -R appuser:appgroup /var/log/nginx && \
     chown -R appuser:appgroup /etc/nginx/conf.d && \
+    mkdir -p /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp /var/cache/nginx/fastcgi_temp /var/cache/nginx/uwsgi_temp /var/cache/nginx/scgi_temp && \
+    chown -R appuser:appgroup /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp /var/cache/nginx/fastcgi_temp /var/cache/nginx/uwsgi_temp /var/cache/nginx/scgi_temp && \
     chmod -R 755 /usr/share/nginx/html
-
-# Create nginx pid directory permission
-RUN touch /var/run/nginx.pid && \
-    chown appuser:appgroup /var/run/nginx.pid
 
 # Switch to non-root user
 USER appuser
